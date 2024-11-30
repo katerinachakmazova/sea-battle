@@ -9,6 +9,7 @@ margin: auto;
 }
 .ships {
   outline:2px solid black;
+  margin:3px;
 }
 /* grid */
 .field {
