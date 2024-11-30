@@ -1,0 +1,69 @@
+*{
+  box-sizing: border-box;
+}
+.field {
+border: 3px solid black;
+width:500px;
+height: 500px;
+margin: auto;
+}
+.ships {
+  outline:2px solid black;
+}
+/* grid */
+.field {
+  display: grid;
+  grid-template:
+  "a a . b . . c c c c" 1fr
+  ". . . b . . . . . ." 1fr
+  "d . . b . e e e . f" 1fr
+  "d . . . . . . . . f" 1fr
+  "d . . . . . . . . ." 1fr
+  "d . . . . g . . . h" 1fr
+  ". . . . . g . . . h" 1fr
+  "i i . . . . . . . h" 1fr
+  ". . . . . . . . . ." 1fr
+  ". . . . k k k k k k" 1fr
+  /1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.ships:first-child {
+  grid-area: a;
+}
+.ships:nth-child(2) {
+  grid-area: b;
+}
+.ships:nth-child(3) {
+  grid-area: c;
+}
+.ships:nth-child(4) {
+  grid-area: f;
+}
+.ships:nth-child(5) {
+  grid-area: e;
+}
+.ships:nth-child(6) {
+  grid-area: d;
+}
+.ships:nth-child(7) {
+  grid-area: g;
+}
+.ships:nth-child(8) {
+  grid-area: h;
+}
+.ships:nth-child(10) {
+  grid-area: i;
+}
+/* background ships */
+.ships:nth-child(3n+1) {
+  background-color: rgb(138, 25, 148);
+}
+.ships:nth-child(3n+2) {
+  background-color: rgb(49, 239, 49);
+}
+.ships:nth-child(3n+3) {
+  background-color: blue;
+}
+.ships:nth-child(9) {
+  background-color: darkorange;
+  grid-area: k;
+}
